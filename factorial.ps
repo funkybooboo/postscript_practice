@@ -1,0 +1,13 @@
+%!PS
+
+/factorial {
+    1 dict begin
+        /x exch def
+        x 2 lt
+            {1}
+            {x x 1 sub factorial mul}
+        ifelse
+
+    end
+}
+def

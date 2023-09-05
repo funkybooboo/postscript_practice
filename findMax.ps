@@ -1,0 +1,47 @@
+%!PS
+
+/findMax
+{
+
+    count 2 ge
+    {
+        1 dict begin
+
+            dup
+            /curmax exch def
+
+            /max
+            {
+                dup curmax gt
+                {
+                    dup 
+                    /curmax exch def
+                }
+                if
+            }
+            def
+
+            count 1 roll
+
+            count 1 sub
+            {
+                max
+                count 1 roll
+            }
+            repeat
+
+            curmax
+
+        end
+    }
+    {
+        count 1 eq
+        {
+            dup
+        }
+        if
+    }
+    ifelse
+    
+}
+def
